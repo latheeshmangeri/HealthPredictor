@@ -13,7 +13,7 @@ try:
 except:
     pass
 app = Flask(__name__, template_folder='template')
-model1 = load_model("models\Malaria_model111.h5")
+model1 = load_model("Malaria_model111.h5")
 model2 = load_model("models\Pneumonia_Prediction_model.h5")
 model3 = load_model("models\Breast_model.h5")
 model4 = load_model("models\Brain_Tumor_VGG_model.h5")
@@ -38,7 +38,7 @@ def predict_malaria():
         print("filepath is ", filepath)
         f.save(filepath)
         img = image.load_img(filepath, target_size=(50,50,3))
-        img.save('D:\\zBin\\Py\\Health\\static\\img.png')
+        img.save('D:\\zBin\\Py\\thstatic\\img.png')
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis=0)
         output = model1.predict(x)
