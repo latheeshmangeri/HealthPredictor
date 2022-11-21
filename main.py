@@ -13,7 +13,7 @@ try:
 except:
     pass
 app = Flask(__name__, template_folder='template')
-model1 = load_model("models\Malaria_model111.h5")
+model1 = load_model("Malaria_model111.h5")
 
 @app.route('/')
 def index():
