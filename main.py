@@ -38,7 +38,6 @@ def predict_malaria():
         print("filepath is ", filepath)
         f.save(filepath)
         img = image.load_img(filepath, target_size=(50, 50, 3))
-        img.save('D:\\img.png')
         x = image.img_to_array(img)
         x = np.expand_dims(x, axis=0)
         output = model1.predict(x)
